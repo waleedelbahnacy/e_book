@@ -1,3 +1,4 @@
+import 'package:e_book/constants.dart';
 import 'package:e_book/core/utils/assets.dart';
 import 'package:e_book/core/utils/styles.dart';
 import 'package:e_book/views/custom_app_bar.dart';
@@ -23,7 +24,7 @@ class HomeViewBody extends StatelessWidget {
           height:50 ,
          ),
          Text('Best Seller',
-         style: Styles.titleMedium,
+         style: Styles.textStyle18,
          ),
          BestSellerListViewItem(),
         ],
