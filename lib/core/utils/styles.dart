@@ -10,7 +10,6 @@ static const textStyle18 = TextStyle(
 static const textStyle20 = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.normal,
-  fontFamily:KGtSectraFine,
 );
 static const textStyle30 = TextStyle(
   fontSize: 30,
