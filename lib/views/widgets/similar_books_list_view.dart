@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 class SimilarBooksListView extends StatelessWidget {
   const SimilarBooksListView({super.key});
 
-      @override
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
-       height: MediaQuery.of(context).size.height *.15,
+      height: MediaQuery.of(context).size.height * .15,
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context , index){
-        return const Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 5),
-          child:  CustomBookImage(),
-        );
-      }),
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5),
+              child: CustomBookImage(),
+            );
+          }),
     );
   }
 }

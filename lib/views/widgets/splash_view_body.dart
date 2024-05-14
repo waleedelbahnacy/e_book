@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
-
 import 'sliding_text.dart';
 
 class SplashViewbody extends StatefulWidget {
@@ -17,25 +16,20 @@ class SplashViewbody extends StatefulWidget {
   State<SplashViewbody> createState() => _SplashViewbodyState();
 }
 
-class _SplashViewbodyState extends State<SplashViewbody> with SingleTickerProviderStateMixin{
-
+class _SplashViewbodyState extends State<SplashViewbody>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
-
   @override
   void initState() {
-     super.initState();
+    super.initState();
 
-   initSlidingAnimation();
+    initSlidingAnimation();
 
-   navigateToHome();
-    
+    navigateToHome();
   }
 
- 
-
- 
   @override
   void dispose() {
     super.dispose();
@@ -58,27 +52,27 @@ class _SplashViewbodyState extends State<SplashViewbody> with SingleTickerProvid
     );
   }
 
-
-    void initSlidingAnimation() {
-     animationController =AnimationController(
-     vsync: this,
-     duration: const Duration(seconds: 1), 
+  void initSlidingAnimation() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
     );
     slidingAnimation =
-     Tween<Offset>(begin: const Offset(0, 2) ,end:Offset.zero)
-     .animate(animationController);
-    
-     animationController.forward();
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
+            .animate(animationController);
+
+    animationController.forward();
   }
-   void navigateToHome() {
-     Future.delayed( const Duration(seconds: 2),()
-    {
-    // Get.to(()=> const HomeView(),
-      //transition: Transition.fade ,
-      // duration: KTransitionDuration);
-      GoRouter.of(context).push(AppRouter.KHomeView);
-    },
-   );
+
+  void navigateToHome() {
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        // Get.to(()=> const HomeView(),
+        //transition: Transition.fade ,
+        // duration: KTransitionDuration);
+        GoRouter.of(context).push(AppRouter.KHomeView);
+      },
+    );
   }
 }
-

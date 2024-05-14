@@ -12,45 +12,39 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column
-      (
-        children:const [
-           CustomSearchTextField(),
-            SizedBox(
+      child: Column(
+        children: const [
+          CustomSearchTextField(),
+          SizedBox(
             height: 16,
-           ),
-           Text(
+          ),
+          Text(
             'Search Result',
             style: Styles.textStyle18,
-            ),
-              SizedBox(
+          ),
+          SizedBox(
             height: 16,
-           ),
-           Expanded(
-            child: SearchResultListView()),
+          ),
+          Expanded(child: SearchResultListView()),
         ],
       ),
     );
   }
 }
 
-
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder( 
-      padding: EdgeInsets.zero,
-      itemCount: 10,
-      itemBuilder: (context,index)
-      {
-        return const Padding(
-          padding:  EdgeInsets.symmetric(vertical: 10),
-          child:  BookListViewItem(),
-        );
-      }
-      );
+    return ListView.builder(
+        padding: EdgeInsets.zero,
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: BookListViewItem(),
+          );
+        });
   }
 }
-
