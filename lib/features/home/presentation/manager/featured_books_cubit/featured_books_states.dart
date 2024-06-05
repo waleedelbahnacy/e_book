@@ -1,7 +1,4 @@
 
-
-
-
 import 'package:e_book/features/home/data/models/book_model/book_model.dart';
 
 abstract class FeaturedBooksState {}
