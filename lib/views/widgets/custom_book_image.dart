@@ -11,11 +11,12 @@ class CustomBookImage extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
-        aspectRatio: 2.6 / 4,
+        aspectRatio: 2.6/ 4,
         child: CachedNetworkImage(
           fit: BoxFit.fill,
           imageUrl: imageUrl,
-          errorWidget: (context, url, error) => Icon(Icons.error,
+          
+          errorWidget: (context, url, error) =>const Icon(Icons.error,
           ),
           ),
       ),
